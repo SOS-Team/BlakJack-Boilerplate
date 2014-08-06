@@ -509,7 +509,7 @@ var commands = {
 
     rps: function (target, room, user) {
         if (!target) return;
-        var options = ['rock', 'paper', 'scissors'],
+        var options = ['rock', 'paper', 'scissors','water balloon'],
             rng = options[Math.floor(Math.random() * options.length)],
             target = toId(target);
 
@@ -525,6 +525,12 @@ var commands = {
         if (rng === options[2]) {
             if (target === options[0]) return this.sendReply('I chose ' + rng + '. ' + user.name + ' wins!');
             if (target === options[1]) return this.sendReply('I chose ' + rng + '. I win and ' + user.name + ' loses!');
+        }
+        if (rng === options[3]) {
+            return this.sendReply('Nothing beats Water Balloon')
+            if (target === options[0]) return this.sendReply('I chose ' + rng + '. I win and ' + user.name + ' loses!');
+            if (target === options[1]) return this.sendReply('I chose ' + rng + '. I win and ' + user.name + ' loses!');
+            if (target === options[2]) return this.sendReply('I chose ' + rng + '. I win and ' + user.name + ' loses!');
         }
     },
 
