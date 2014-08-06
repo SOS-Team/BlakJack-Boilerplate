@@ -527,7 +527,6 @@ var commands = {
             if (target === options[1]) return this.sendReply('I chose ' + rng + '. I win and ' + user.name + ' loses!');
         }
         if (rng === options[3]) {
-            return this.sendReply('Nothing beats Water Balloon')
             if (target === options[0]) return this.sendReply('I chose ' + rng + '. I win and ' + user.name + ' loses!');
             if (target === options[1]) return this.sendReply('I chose ' + rng + '. I win and ' + user.name + ' loses!');
             if (target === options[2]) return this.sendReply('I chose ' + rng + '. I win and ' + user.name + ' loses!');
