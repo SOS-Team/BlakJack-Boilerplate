@@ -883,6 +883,7 @@ var commands = exports.commands = {
 		};
 	})(),
 
+	ranks: 'groups',
 	groups: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(Config.groups.byRank.reduce(function (info, group) {
