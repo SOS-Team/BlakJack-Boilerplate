@@ -28,6 +28,8 @@ var components = exports.components = {
        sleeping: 'away',
        busy: 'away',
        afk: 'away',
+       tt: 'away',
+       timetraveling: 'away',
        away: function(target, room, user, connection, cmd) {
             // unicode away message idea by Siiilver
             var t = 'Ⓐⓦⓐⓨ';
@@ -56,6 +58,14 @@ break;
 case 'work':
 t = 'Ⓦⓞⓡⓚⓘⓝⓖ';
 t2 = 'Working';
+break;
+case 'timetraveling':
+t = 'ⓉⓘⓜⓔⓉⓡⓐⓥⓔⓛⓘⓝⓖ';
+t2 = 'Time Traveling';
+break;
+case 'tting':
+t = 'ⓉⓘⓜⓔⓉⓡⓐⓥⓔⓛⓘⓝⓖ';
+t2 = 'Time Traveling';
 break;
 case 'eating':
 t = 'Ⓔⓐⓣⓘⓝⓖ';
