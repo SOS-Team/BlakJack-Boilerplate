@@ -61,11 +61,11 @@ t2 = 'Working';
 break;
 case 'timetraveling':
 t = 'ⓉⓘⓜⓔⓉⓡⓐⓥⓔⓛⓘⓝⓖ';
-t2 = 'Time Traveling';
+t2 = 'TimeTraveling';
 break;
-case 'tting':
+case 'tt':
 t = 'ⓉⓘⓜⓔⓉⓡⓐⓥⓔⓛⓘⓝⓖ';
-t2 = 'Time Traveling';
+t2 = 'TimeTraveling';
 break;
 case 'eating':
 t = 'Ⓔⓐⓣⓘⓝⓖ';
