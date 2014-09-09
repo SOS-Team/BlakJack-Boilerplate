@@ -346,7 +346,12 @@ global.toName = function (name) {
 	if (name.length > 18) name = name.substr(0, 18).trim();
 	return name;
 };
-
+global.sanitize = function(str, strEscape) {
+	str = (''+(str||''));
+	str = str.escapeHTML();
+	if (strEscape) str = str.replace(/'/g, '\\\'');
+	return str;
+};
 /**
  * Safely ensures the passed variable is a string
  * Simply doing '' + str can crash if str.toString crashes or isn't a function
