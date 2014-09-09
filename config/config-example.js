@@ -64,7 +64,7 @@ exports.loginServer = {
 //   be more than one line of messages.
 //   This feature can lag larger servers - turn this off if your server is
 //   getting more than 80 or so users.
-exports.reportJoins = false;
+exports.reportJoins = true;
 
 // report battles - shows messages like "OU battle started" in the lobby
 //   This feature can lag larger servers - turn this off if your server is
@@ -139,6 +139,7 @@ exports.herokuHack = false;
 // displayed in the client.
 exports.customAvatars = {
 	//'userid': 'customavatar.png'
+	
 };
 
 // appealUri - specify a URI containing information on how users can appeal
@@ -231,7 +232,7 @@ exports.groups = {
 	bySymbol: {
 		'~': {
 			id: 'admin',
-			name: "Brigade Chief",
+			name: "Admin",
 			description: "They can do anything, like change what this message says",
 			root: true
 		},
