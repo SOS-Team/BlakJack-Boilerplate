@@ -355,6 +355,7 @@ var commands = {
             if (target === 'rickycocaine') message = 'RICKY COCAAAAAAAINE﻿';
             if (target === 'blakjack') message = 'I\'m better than you and you know it! BITCH!';
             if (target === 'claraoswald') message = 'My Impossible Girl';
+            if (target === 'claraowald') message = 'My Impossible Girl';
             
             this.sendReply(message);
         };
