@@ -355,6 +355,8 @@ var commands = {
             if (target === 'rickycocaine') message = 'RICKY COCAAAAAAAINE﻿';
             if (target === 'blakjack') message = 'I\'m better than you and you know it! BITCH!';
             if (target === 'namine') message = 'Someone you will love till you\'re just a story!';
+            if (target === 'meloetta') message = 'Borussia Dortmund fan, Marco Reus fan, hates FC Schalke';
+            
 
             this.sendReply(message);
         };
