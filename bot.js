@@ -86,7 +86,7 @@ function joinServer() {
     }
 }
 
-const ACTION_COOLDOWN = 1 * 1000;
+const ACTION_COOLDOWN = 3 * 1000;
 const FLOOD_MESSAGE_NUM = 5;
 const FLOOD_PER_MSG_MIN = 500; // this is the minimum time between messages for legitimate spam. It's used to determine what "flooding" is caused by lag
 const FLOOD_MESSAGE_TIME = 6 * 1000;
@@ -307,11 +307,6 @@ var commands = {
     penislength: function (target, room, user) {
         this.sendReply('8.5 inches from the base. Perv.');
     },
-    
-    database: function (target, room, user) {
-        this.sendReply('test');
-    },
-    
 
     seen: function (target, room, user, connection) {
         if (!target) return;
@@ -359,8 +354,7 @@ var commands = {
             if (target === 'stevoduhhero') message = 'STEVO DUH GOD DAMN HERO! Respect him!';
             if (target === 'rickycocaine') message = 'RICKY COCAAAAAAAINE﻿';
             if (target === 'blakjack') message = 'I\'m better than you and you know it! BITCH!';
-            if (target === 'claraoswald') message = 'My Impossible Girl';
-            
+
             this.sendReply(message);
         };
     })(),
@@ -398,7 +392,7 @@ var commands = {
     })(),
 
     maketournament: function (target, room, user) {
-        if (!this.can('maketournament')) return;
+        if (!this.can('ban')) return;
         if (Tournaments.tournaments[room.id]) return this.sendReply('A tournament is already running in the room.');
 
         var parts = target.split(','),
@@ -490,7 +484,7 @@ var commands = {
         poll();
         loop();
     },
-    
+
     join: function (target, room, user, connection) {
         if (!user.can('kick')) return;
         if (!target || !Rooms.get(target.toLowerCase())) return;
@@ -514,7 +508,7 @@ var commands = {
 
     rps: function (target, room, user) {
         if (!target) return;
-        var options = ['rock', 'paper', 'scissors','water balloon'],
+        var options = ['rock', 'paper', 'scissors'],
             rng = options[Math.floor(Math.random() * options.length)],
             target = toId(target);
 
