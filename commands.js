@@ -1015,7 +1015,7 @@ var commands = exports.commands = {
 	if (!target) {
 		return this.sendReply('No new name was specified.');
 	}
-	if (!this.can('forcerenameto', targetUser)) return false;
+	if (!this.can('ban', targetUser)) return false;
 	
 	if (targetUser.userid === toUserid(this.targetUser)) {
 		var entry = ''+targetUser.name+' was forcibly renamed to '+target+' by '+user.name+'.';
