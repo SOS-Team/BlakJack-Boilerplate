@@ -308,9 +308,10 @@ var commands = {
         this.sendReply('8.5 inches from the base. Perv.');
     },
     
-     rules: function (target, room, user) {
-        this.sendReply('01: The Doctor Lies. <br /> 02: Never ignore a coincidence. Unless you're busy, then always ignore a coincidence.');
+    database: function (target, room, user) {
+        this.sendReply('test');
     },
+    
 
     seen: function (target, room, user, connection) {
         if (!target) return;
