@@ -1004,6 +1004,31 @@ var commands = exports.commands = {
 		targetUser.send("|nametaken||" + user.name + " has forced you to change your name. " + target);
 	},
 
+	fr: 'forcerename',
+	forcerename: function (target, room, user) {
+		if (!target) return this.parse('/help forcerename');
+		if (user.locked || user.mutedRooms[room.id]) return this.sendReply("You cannot do this while unable to talk.");
+		var commaIndex = target.indexOf(',');
+		var targetUser, reason;
+		if (commaIndex !== -1) {
+		reason = target.substr(commaIndex + 1).trim();
+		target = target.substr(0, commaIndex);
+	}
+	targetUser = Users.get(target);
+	if (!targetUser) return this.sendReply("User '" + this.targetUsername + "' not found.");
+	if (!this.can('forcerename', targetUser)) return false;
+	
+	if (targetUser.userid !== toId(target)) {
+		return this.sendReply("User '" + target + "' had already changed its name to '" + targetUser.name + "'.");
+	}
+	var entry = targetUser.name + " was forced to choose a new name by " + user.name + (reason ? ": " + reason: "");
+	this.privateModCommand("(" + entry + ")");
+	Rooms.global.cancelSearch(targetUser);
+	targetUser.resetName();
+	targetUser.send("|nametaken||" + user.name + " has forced you to change your name. " + target);
+	},
+
+
 	modlog: function (target, room, user, connection) {
 		var lines = 0;
 		// Specific case for modlog command. Room can be indicated with a comma, lines go after the comma.
