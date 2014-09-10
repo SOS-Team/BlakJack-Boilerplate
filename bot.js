@@ -86,7 +86,7 @@ function joinServer() {
     }
 }
 
-const ACTION_COOLDOWN = 3 * 1000;
+const ACTION_COOLDOWN = 1 * 1000;
 const FLOOD_MESSAGE_NUM = 5;
 const FLOOD_PER_MSG_MIN = 500; // this is the minimum time between messages for legitimate spam. It's used to determine what "flooding" is caused by lag
 const FLOOD_MESSAGE_TIME = 6 * 1000;
@@ -355,7 +355,6 @@ var commands = {
             if (target === 'rickycocaine') message = 'RICKY COCAAAAAAAINE﻿';
             if (target === 'blakjack') message = 'I\'m better than you and you know it! BITCH!';
             if (target === 'claraoswald') message = 'My Impossible Girl';
-            if (target === 'claraowald') message = 'My Impossible Girl';
             
             this.sendReply(message);
         };
