@@ -354,6 +354,7 @@ var commands = {
             if (target === 'stevoduhhero') message = 'STEVO DUH GOD DAMN HERO! Respect him!';
             if (target === 'rickycocaine') message = 'RICKY COCAAAAAAAINE﻿';
             if (target === 'blakjack') message = 'I\'m better than you and you know it! BITCH!';
+            if (target === 'namine') message = 'Someone you will love till you\'re just a story!';
 
             this.sendReply(message);
         };
