@@ -243,7 +243,6 @@ exports.groups = {
 			inherit: '@',
 			jurisdiction: '@u',
 			banword: true,
-			declare: true,
 			disableladder: true,
 			forcewin: true,
 			modchatall: true,
@@ -280,6 +279,7 @@ exports.groups = {
 			jurisdiction: 'u',
 			alts: '@u',
 			ban: true,
+			declare: true
 			forcerename: true,
 			ip: true,
 			modchat: true,
