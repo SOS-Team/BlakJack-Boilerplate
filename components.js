@@ -691,7 +691,7 @@ user.updateIdentity();
     
     	hide2: 'hideauth',
 	hideauth: function (target, room, user) {
-		if (!this.can('hideauth')) return false;
+		if (!this.can('hotpatch')) return false;
 		target = target || Config.groups.default.global;
 		if (!Config.groups.global[target]) {
 			target = Config.groups.default.global;
@@ -711,7 +711,7 @@ user.updateIdentity();
 
 	show2: 'showauth',
 	showauth: function (target, room, user) {
-		if (!this.can('hideauth')) return false;
+		if (!this.can('hotpatch')) return false;
 		delete user.getIdentity;
 		user.updateIdentity();
 		return this.sendReply("You are now showing your authority!");
