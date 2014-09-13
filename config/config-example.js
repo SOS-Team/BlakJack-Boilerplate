@@ -279,7 +279,7 @@ exports.groups = {
 			jurisdiction: 'u',
 			alts: '@u',
 			ban: true,
-			declare: true
+			declare: true,
 			forcerename: true,
 			ip: true,
 			modchat: true,
