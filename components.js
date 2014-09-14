@@ -971,6 +971,10 @@ user.updateIdentity();
             this.sendReply('Reloading Core...');
             CommandParser.uncacheTree(path.join(__dirname, './', './core.js'));
             Core = require(path.join(__dirname, './', './core.js')).core;
+			
+			this.sendReply('Reloading Hangman...');
+            CommandParser.uncacheTree(path.join(__dirname, './', './hangman.js'));
+            hangman = require(path.join(__dirname, './', './hangman.js')).hangman;
 
             this.sendReply('Reloading Components...');
             CommandParser.uncacheTree(path.join(__dirname, './', './components.js'));
