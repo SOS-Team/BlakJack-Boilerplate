@@ -454,7 +454,7 @@ fs.readFile('./logs/uptime.txt', function (err, uptime) {
 
 global.Core = require('./core.js').core;
 
-global.hangman = require('./hangman.js').hangman;
+global.hangman = require('./hangman.js').hangman();
 
 global.Components = require('./components.js');
 
