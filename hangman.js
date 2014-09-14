@@ -71,6 +71,9 @@ var cmds = {
 		if (target == "update" && !this.can('hotpatch')) {
 			return this.sendReply('You cannot update hangman scripts.');
 		}
+		if(room.id === 'lobby') {
+			return this.sendReply('|html|Please play this in another room; it\'s too spammy for lobby.');
+		}
 		if (!user.can('broadcast', null, room)) {
 			return this.sendReply('You do not have enough authority to do this.');
 		}
