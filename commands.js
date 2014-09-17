@@ -293,7 +293,7 @@ var commands = exports.commands = {
 
 	roomintro: function (target, room, user) {
 		if (!target) {
-			if (!this.canBroadcast()) return;
+			if (!this.can('ban')) return false;
 			if (!room.introMessage) return this.sendReply("This room does not have an introduction set.");
 			this.sendReplyBox(room.introMessage);
 			if (!this.broadcasting && user.can('roomintro', room)) {
