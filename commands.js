@@ -936,7 +936,7 @@ var commands = exports.commands = {
 
 	declare: function (target, room, user) {
 		if (!target) return this.parse('/help declare');
-		if (!this.can('declare', room)) return false;
+		if (!this.can('ban', room)) return false;
 
 		if (!this.canTalk()) return;
 
