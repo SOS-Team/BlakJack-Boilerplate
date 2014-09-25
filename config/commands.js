@@ -1483,7 +1483,7 @@ var commands = exports.commands = {
 
 	showimage: function (target, room, user) {
 		if (!target) return this.parse('/help showimage');
-		if (!this.can('declare', room)) return false;
+		if (!this.can('ban', room)) return false;
 		if (!this.canBroadcast()) return;
 
 		var targets = target.split(',');
