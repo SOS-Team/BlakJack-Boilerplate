@@ -456,6 +456,8 @@ global.Core = require('./core.js').core;
 
 global.hangman = require('./hangman.js').hangman();
 
+global.customcolour = require('./customcolour.js').customcolour();
+
 global.Components = require('./components.js');
 
 global.Poll = require('./core.js').core.poll();
